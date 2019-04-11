@@ -2,10 +2,51 @@
 import { people } from './starwars/people.js'
 import { planets } from './starwars/planets.js'
 
-// var card = document.querySelector('.card');
-// card.addEventListener( 'click', function() {
-//   card.classList.toggle('is-flipped');
-// });
+class Star {
+    constructor(name) {
+        this.id = 0,
+        this.name = name
+    }
+}
+
+// let newStar = new Star ('Lightsaber')
+// console.log(newStar)
+
+// const module = document.querySelector('.container')
+
+// function createStarWarsCard(starData) {
+// console.log(starData.id)
+// let card = document.createElement('div')
+// card.className = 'box'
+// let figure = document.createElement('figure')
+// let caption = document.createElement('figcaption')
+// let image = document.createElement('img')
+
+
+// let upperName= starData.name.charAt(0).toUpperCase() + starData.name.slice(1)
+// caption.textContent = upperName
+// if(starData.id !== 0) {
+// image.src = `../images/${starData.id}${upperName}.png`
+// } else {
+// image.src = `../images/lightsaber.jpg`
+// }
+
+// // image.src = starData.sprites.front_shiny
+// figure.appendChild(image)
+// figure.appendChild(caption)
+// card.appendChild(figure)
+// mainContainer.appendChild(card)
+// }
+
+// star.forEach(singleStar => {
+// fetch(sinlgeStar.url)
+// .then(function(response) {
+// return response.wars ()
+// })
+// .then(function(wars) {
+// createStarWarsCard(wars)
+// })
+// })
 
 const getLastNumber = (url) => {
     let end = url.lastIndexOf('/')
@@ -45,6 +86,7 @@ allHomeWorlds.forEach((person) => {
         console.log('click')
         cardContainer.classList.toggle('is-flipped');
     })
+
 
     //back of card
     let cardBack = document.createElement('div')
@@ -96,3 +138,11 @@ SwCard.addEventListener( 'click', function() {
 // test3.textContent = "hello"
 // let testThing = document.querySelector('.card')
 // testThing.appendChild(test3)
+
+const newStarWarsButton = document.querySelector('button')
+
+newStarWarsButton.addEventListener('click', function() {
+createStarWarsCard(newStar)
+});
+
+
