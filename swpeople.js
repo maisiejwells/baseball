@@ -24,8 +24,6 @@ const allHomeWorlds = people.map(person => {
         name: person.name,
         home: foundWorld.name,
         birth_year: person.birth_year,
-        height: person.height,
-        mass: person.mass,
         imagePath:`https://starwars-visualguide.com/assets/img/characters/${imageURL}.jpg`,
         imagePlanets:`https://starwars-visualguide.com/#/planets/${imageURL}`
     }
@@ -127,6 +125,7 @@ function newCard(name) {
 
 
 
+
     let cardContainer = document.createElement('div')
     cardContainer.className = "card"
     cardContainer.addEventListener('click', function() {
@@ -165,7 +164,6 @@ imageSaber.src = "./images/lightsaber.jpg"
 cardContainer.appendChild(imageSaber)
 
 }
-
 
 
 
