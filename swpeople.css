@@ -81,15 +81,22 @@
       width:100%;
     }
     .card__face--back {
-      /* position: absolute; */
-
-      /* background: rgba(255, 0, 0, 0.3); */
-      background:lightcoral;
+      background-color: black;
       transform: rotateY(180deg);
-      /* width: 100%;
-      height: 100%; */
-      /* position: absolute; */
-      /* backface-visibility: hidden; */
-      /* z-index: -10; */
+      display: flex;
+      opacity: 20%;
+    }
+    .card__face--back img {
+      opacity: 0.25;
+      filter: alpha(opacity=50);
+    }
 
+    .saberpic {
+      backface-visibility: hidden;
+      display:flex;
+      height: 100%;
+    }
+    .button{
+      position: fixed;
+      z-index: 30;
     }
