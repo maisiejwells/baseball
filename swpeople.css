@@ -108,8 +108,15 @@
 
     .character {
       text-align: center;
-      font-size:30px;
+      font-size:40px;
       padding-bottom:15px;
       font-family: star jedi;
       color: black;
     }
+    /* .name {
+      background: rgba(255, 0, 0, 0.3);
+      border-radius: 10px 25px 10px 25px;
+      font-weight: 450;
+      font-style: italic;
+      color: black;
+    } */

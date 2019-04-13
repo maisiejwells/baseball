@@ -146,17 +146,6 @@ mainContainer.appendChild(cardContainer)
 // cardContainer.appendChild(personElement)
 cardContainer.appendChild(cardBack)
 
-// cardContainer.appendChild(imageSaber)
-// personElement.appendChild(planetElement)
-// personElement.appendChild(birthYear)
-// personElement.appendChild(imageElement)
-// mainContainer.appendChild(personElement)
-
-// personElement.appendChild(planetElement)
-// personElement.appendChild(imagePlanet)
-
-
-// document.body.appendChild(mainContainer)
 
 let imageSaber = document.createElement('img')
 imageSaber.className = "saberpic"
