@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap:wrap;
+
     }
 
     .container div{
@@ -15,13 +16,15 @@
     .planetName {
         background: rgba(255, 0, 0, 0.3);
         border-radius: 10px 25px 10px 25px;
-        font-weight: 450;
+        font-weight: 500;
         font-style: italic;
         color: black;
+
     }
 
     .box {
     color: black;
+
     }
     body { font-family: sans-serif; }
 
@@ -44,6 +47,7 @@
       /* backface-visibility: hidden; */
       background: none;
       margin-top: 50px;
+
 
     }
 
