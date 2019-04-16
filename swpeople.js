@@ -17,7 +17,7 @@ const getLastNumber = (url) => {
 const allHomeWorlds = people.map(person => {
     //console.log(getLastNumber(person.url))
     let foundWorld = planets.find(planet => {
-        return planet.url === person.homeworld
+    return planet.url === person.homeworld
     })
     let imageURL = getLastNumber(person.url)
     return {
@@ -54,6 +54,7 @@ allHomeWorlds.forEach((person) => {
 
 
     //front of card
+
     let personElement = document.createElement('div')
     personElement.className = "card__face card__face--front"
 
@@ -61,11 +62,11 @@ allHomeWorlds.forEach((person) => {
     planetElement.className = "planetName"
     let birthYear = document.createElement('p')
     let imageElement = document.createElement('img')
-
     let imagePlanet = document.createElement('img')
 
     personElement.textContent = person.name
     planetElement.textContent = person.home
+    // massElement.textContent = person.mass
     birthYear.textContent = person.birth_year
     imageElement.src = person.imagePath
 
@@ -153,6 +154,7 @@ imageSaber.src = "./images/lightsaber.jpg"
 cardContainer.appendChild(imageSaber)
 
 }
+
 
 
 
