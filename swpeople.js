@@ -3,8 +3,6 @@ import { people } from './starwars/people.js'
 import { planets } from './starwars/planets.js'
 
 
-
-
 const getLastNumber = (url) => {
     let end = url.lastIndexOf('/')
     let start = end - 2
@@ -21,6 +19,7 @@ const allHomeWorlds = people.map(person => {
     })
     let imageURL = getLastNumber(person.url)
     return {
+        height: person.height,
         name: person.name,
         home: foundWorld.name,
         birth_year: person.birth_year,
@@ -31,8 +30,7 @@ const allHomeWorlds = people.map(person => {
 
 console.log(allHomeWorlds)
 
-const mainContainer = document.createElement('div')
-mainContainer.className = 'container'
+const mainContainer = document.querySelector('.container')
 
 allHomeWorlds.forEach((person) => {
 // console.log("test")
@@ -47,11 +45,17 @@ allHomeWorlds.forEach((person) => {
 
     //back of card
     let cardBack = document.createElement('div')
+    let cardInfo = document.createElement('div')
+    cardInfo.className = "info"
+    let height = document.createElement('p')
+    height.textContent = person.height
     let backImage = document.createElement('img')
+    backImage.className = "backImg"
     backImage.src = './starslogo.png'
     cardBack.className = "card__face card__face--back"
     cardBack.appendChild(backImage)
-
+    cardInfo.appendChild(height)
+    cardBack.appendChild(cardInfo)
 
     //front of card
 
@@ -72,7 +76,7 @@ allHomeWorlds.forEach((person) => {
 
     imagePlanet.src = person.imagePlanet
 
-    mainContainer.appendChild(cardContainer)
+    
     cardContainer.appendChild(personElement)
     cardContainer.appendChild(cardBack)
 
@@ -85,8 +89,8 @@ allHomeWorlds.forEach((person) => {
     personElement.appendChild(planetElement)
     // personElement.appendChild(imagePlanet)
 
-
-    document.body.appendChild(mainContainer)
+    mainContainer.appendChild(cardContainer)
+    // document.body.appendChild(mainContainer)
 
 })
 

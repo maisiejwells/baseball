@@ -92,12 +92,15 @@ font-size:20px;
     .card__face--back {
       background-color: black;
       transform: rotateY(180deg);
-      display: flex;
-      opacity: 20%;
     }
-    .card__face--back img {
-      opacity: 0.7;
-      filter: alpha(opacity= 50);
+    .backImg {
+      opacity: 0.5;
+      /* filter: alpha(opacity= 50); */
+    }
+
+    .info {
+      font-size: 1.5rem;
+      color: #fff;
     }
 
     .saberpic {
@@ -106,8 +109,6 @@ font-size:20px;
       height: 100%;
     }
     .button{
-      position: fixed;
-      z-index: 30;
       color: black;
       background: rgba(255, 0, 0, 0.3);
 
